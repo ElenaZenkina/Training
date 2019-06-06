@@ -17,5 +17,26 @@ namespace Snake
                 point.Draw();
             }
         }
+
+        public bool IsTravers(Figure figure)
+        {
+            foreach (var p in pList)
+            {
+                if (figure.IsTravers(p)) return true;
+            }
+            return false;
+        }
+
+        public bool IsTravers(Point point)
+        {
+            foreach (var p in pList)
+            {
+                if (p.IsEquals(point)) return true;
+            }
+            return false;
+        }
+
     }
+
+
 }
